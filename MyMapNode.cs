@@ -58,5 +58,25 @@ namespace HashTable
             }
             return LinkedList;
         }
+        public void Remove(K key)
+        {
+            int position = GetArrayPosition(key);
+            LinkedList<KeyValue<K, V>> LinkedList = GetLinkedList(position);
+            bool mapfound = false;
+            KeyValue<K, V> foundmap = default(KeyValue<K, V>);
+            foreach (KeyValue<K, V> map in LinkedList)
+            {
+                if (map.key.Equals(key))
+                {
+                    mapfound = true;
+                    foundmap = map;
+
+                }
+            }
+            if (mapfound)
+            {
+                LinkedList.Remove(foundmap);
+            }
+        }
     }
 }

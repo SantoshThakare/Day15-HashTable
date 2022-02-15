@@ -11,7 +11,7 @@ namespace HashTable
         static void Main(string[] args)
         {
             Console.WriteLine("Hash Table");
-            MyMapNode<string, string> hash = new MyMapNode<string, string>(6);
+            MyMapNode<string, string> hash = new MyMapNode<string, string>(17);
 
             /*hash.Add("0", "To");
             hash.Add("1", "be");
@@ -42,9 +42,16 @@ namespace HashTable
             hash.Add("16", "paranoid");
             hash.Add("17", "avoidable");
             hash.Add("18", "situation");
+           
+            hash.Remove("17");
+            string hash17 = hash.Get("17");
+            Console.WriteLine("17th index value: " + hash17);
 
-            string hash6 = hash.Get("6");
-            Console.WriteLine("6th index value: " + hash6);
+
+
+
+            //string hash6 = hash.Get("6");
+            //Console.WriteLine("6th index value: " + hash6);
         }
     }
 }
